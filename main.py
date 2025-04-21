@@ -12,4 +12,4 @@ for t in client.list_tickers(
 	):
     tickers.append(t)
 
-print(tickers)
+print(tickers)#
