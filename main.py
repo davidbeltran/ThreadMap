@@ -1,5 +1,6 @@
 from polygon import RESTClient
 import time
+import pprint
 
 client = RESTClient("Fk_L8BpDagq1F62ed5WObk3uhxWSJbMA")
 
@@ -15,10 +16,10 @@ for t in client.list_tickers(
 	):
     tickers.append(t)
     count += 1
-    if count > 1:
+    if count > 10:
         break
 
-print(tickers)
+pprint.pprint(tickers)
 
 
 
