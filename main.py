@@ -16,9 +16,8 @@ for t in client.list_tickers(
 	):
     tickers.append(t)
     count += 1
-    if count > 100:
-        break
-
+    # if count > 100:
+    #     break
 pprint.pprint(tickers)
 
 
