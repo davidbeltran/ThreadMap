@@ -1,8 +1,10 @@
 from polygon import RESTClient
+import time
 
 client = RESTClient("Fk_L8BpDagq1F62ed5WObk3uhxWSJbMA")
 
 tickers = []
+#for t in client.list_tickers(
 for t in client.list_tickers(
 	market="stocks",
 	active="true",
@@ -11,5 +13,6 @@ for t in client.list_tickers(
 	sort="ticker",
 	):
     tickers.append(t)
+    time.sleep(1)
 
 print(tickers)
