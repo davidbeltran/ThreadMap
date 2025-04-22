@@ -5,39 +5,20 @@ client = RESTClient("Fk_L8BpDagq1F62ed5WObk3uhxWSJbMA")
 
 tickers = []
 cursor = None
-# for t in client.list_tickers(
-# 	market="stocks",
-# 	active="true",
-# 	order="asc",
-# 	limit="100",
-# 	sort="ticker",
-# 	):
-#     tickers.append(t)
-#     time.sleep(1)
-
-# print(tickers)
-
-while True:
-    # Make API call without the 'cursor' argument
-    response = client.list_tickers(
-        market="stocks",
-        active="true",
-        order="asc",
-        limit=100,
-        sort="ticker"
-    )
-    
-    # Add tickers to the list
-    tickers.extend(response)
-    
-    # Check for the next page of results
-    if not response.next_url:  # Adjust if 'next_url' is named differently
+count = 0
+for t in client.list_tickers(
+	market="stocks",
+	active="true",
+	order="asc",
+	limit="100",
+	sort="ticker",
+	):
+    tickers.append(t)
+    count += 1
+    if count > 1:
         break
-    
-    # Update cursor for the next API call
-    cursor = response.next_url
-    client.request(cursor)  # Replace with correct way to call the next URL
-    time.sleep(1)  # Pause to avoid rate limits
+
+print(tickers)
 
 
 
