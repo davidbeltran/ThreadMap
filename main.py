@@ -18,7 +18,7 @@ for t in client.list_tickers(
     count += 1
     # if count > 100:
     #     break#
-pprint.pprint(tickers)#
+pprint.pprint(tickers)
 
 
 
