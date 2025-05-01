@@ -5,7 +5,6 @@ import pprint
 client = RESTClient("Fk_L8BpDagq1F62ed5WObk3uhxWSJbMA")
 
 tickers = []
-cursor = None
 count = 0
 for t in client.list_tickers(
 	market="stocks",
@@ -16,7 +15,7 @@ for t in client.list_tickers(
 	):
     tickers.append(t)
     count += 1
-    if count > 1000:
+    if count > 10:
         break
 print(count)
 # pprint.pprint(tickers)
