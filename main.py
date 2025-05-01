@@ -15,10 +15,11 @@ for t in client.list_tickers(
 	):
     tickers.append(t)
     count += 1
-    if count > 10:
+    time.sleep(0.1)
+    if count > 1000:
         break
 print(count)
-# pprint.pprint(tickers)
+pprint.pprint(tickers)
 
 
 
