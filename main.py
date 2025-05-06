@@ -18,7 +18,7 @@ for t in client.list_tickers(
     time.sleep(12)
     # if count > 10000:
     #     break
-print(count)#
+print(count)
 pprint.pprint(tickers)
 
 
