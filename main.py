@@ -19,7 +19,7 @@ for t in client.list_tickers(
     if count > 10:
         break
 print(count)
-pprint.pprint(tickers)
+pprint.pprint(tickers[8].ticker)
 
 
 
