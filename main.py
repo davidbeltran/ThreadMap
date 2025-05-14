@@ -22,7 +22,7 @@ count = 0
 #         break
     
 matches = [s for s in client.list_tickers(market="stocks",active="true",order="asc",limit="100",sort="ticker",) if re.match(vowels, s.ticker)]
-print(matches)#
+print(matches)
 # pprint.pprint(tickers[8].ticker)
 
 
